@@ -1,3 +1,4 @@
+import isNumeric from "../utils/isNumeric";
 
 const operations = {
   "+": (num1: number, num2: number) => num1 + num2,
@@ -37,10 +38,6 @@ function calculateRPN(expression: string): number {
   if(stack.length === 1 && isNumeric(stack[0]))
     return stack[0];
   throw new Error("Invalid expression");
-}
-
-function isNumeric(value: string | number): boolean {
-  return !isNaN(Number(value))
 }
 
 export default calculateRPN;
