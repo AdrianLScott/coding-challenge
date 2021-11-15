@@ -1,10 +1,15 @@
+import isNumeric from "../utils/isNumeric";
+
 /**
  * Transforms a number to its ordinal equivalent.
  * @param number Number to transform.
  * @returns Ordinal representation of the number.
  */
- function numberToOrdinal(number: number): string {
-  if(number === 0)
+function numberToOrdinal(number: number): string {
+  if(!isNumeric(number))
+    throw new Error("Invalid character");
+    
+  if (Number(number) === 0)
     return '0';
 
   const exceptionNumbers = [11, 12, 13];
