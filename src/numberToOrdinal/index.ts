@@ -1,12 +1,12 @@
 /**
- * Convierte un número a su ordinal correspondiente.
- * @param number Número a convertir.
- * @returns Número ordinal.
+ * Transforms a number to its ordinal equivalent.
+ * @param number Number to transform.
+ * @returns Ordinal representation of the number.
  */
  function numberToOrdinal(number: number): string {
   if(number === 0)
     return '0';
-    
+
   const exceptionNumbers = [11, 12, 13];
   const numberSuffixes = {
     1: 'st',
