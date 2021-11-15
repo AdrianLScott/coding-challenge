@@ -3,7 +3,7 @@
  * @param cardNumber Credit card number
  * @returns Masked card number
  */
- function maskCreditCard(cardNumber: string): string {
+function maskCreditCard(cardNumber: string): string {
   const MIN_LENGTH_TO_MASK = 7;
   const SHOWN_AT_END = 4;
   const SHOWN_AT_START = 1;

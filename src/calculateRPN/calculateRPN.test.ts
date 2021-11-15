@@ -9,7 +9,7 @@ describe("RPN calculation", () => {
   });
 
   it("Test invalid inputs", () => {
-    expect(()=>calculateRPN("5+")).toThrow("5+ is not supported");
-    expect(()=>calculateRPN("3 + +")).toThrow("Invalid expression");
+    expect(() => calculateRPN("5+")).toThrow("5+ is not supported");
+    expect(() => calculateRPN("3 + +")).toThrow("Invalid expression");
   })
 })

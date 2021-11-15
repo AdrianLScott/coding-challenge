@@ -26,8 +26,8 @@ function calculateRPN(expression: string): number {
     const lastStackValue = stack[stack.length - 1];
     const secondLastStackValue = stack[stack.length - 2];
     const calculate = operations[currentDigit];
-    
-    if(!calculate)
+
+    if (!calculate)
       throw new Error(`${currentDigit} is not supported`);
 
     const operationResult = calculate(lastStackValue, secondLastStackValue);
@@ -35,7 +35,7 @@ function calculateRPN(expression: string): number {
     stack.splice(stack.length - 2, 2);
     stack.push(operationResult);
   }
-  if(stack.length === 1 && isNumeric(stack[0]))
+  if (stack.length === 1 && isNumeric(stack[0]))
     return stack[0];
   throw new Error("Invalid expression");
 }

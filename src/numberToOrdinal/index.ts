@@ -6,9 +6,9 @@ import isNumeric from "../utils/isNumeric";
  * @returns Ordinal representation of the number.
  */
 function numberToOrdinal(number: number): string {
-  if(!isNumeric(number))
+  if (!isNumeric(number))
     throw new Error("Invalid character");
-    
+
   if (Number(number) === 0)
     return '0';
 
